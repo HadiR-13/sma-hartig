@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white flex sticky top-0 z-49 border border-[#DBDBDB]">
-      <div className="w-full max-w-[85rem] py-8 mx-auto lg:mx-7 2xl:mx-auto px-5 md:px-2 flex justify-between items-center">
+      <div className="w-full max-w-[83rem] py-8 mx-auto lg:mx-7 2xl:mx-auto px-5 md:px-2 flex justify-between items-center">
         <Link href="/" className="flex gap-x-4 items-center">
           <Image src={Logo} alt="Logo" className="" />
           <h1 className="uppercase font-bold hidden md:block md:text-2xl">sma harapan 3 delitua</h1>
