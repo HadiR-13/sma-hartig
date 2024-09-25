@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/layouts/Navbar/Navbar';
+import Footer from '@/components/layouts/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'SMA Harapan 3 Delitua',
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <main className="flex flex-col min-h-screen overflow-x-hidden">{children}</main>
+        <Footer />
       </body>
     </html>
   );

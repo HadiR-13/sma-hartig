@@ -25,7 +25,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-white flex sticky top-0 z-49 border border-[#DBDBDB]">
+    <nav className="bg-white flex sticky top-0 z-[98] border border-[#DBDBDB]">
       <div className="w-full max-w-[83rem] py-8 mx-auto lg:mx-7 2xl:mx-auto px-5 md:px-2 flex justify-between items-center">
         <Link href="/" className="flex gap-x-4 items-center">
           <Image src={Logo} alt="Logo" className="" />
@@ -57,7 +57,7 @@ export default function Navbar() {
         )}
 
         {!matches && (
-          <div className="space-y-1.5 cursor-pointer z-50" onClick={() => setToggle((prevToggle) => !prevToggle)}>
+          <div className="space-y-1.5 cursor-pointer z-[99]" onClick={() => setToggle((prevToggle) => !prevToggle)}>
             <motion.span animate={{ rotateZ: toggle ? 45 : 0, y: toggle ? 8 : 0 }} className="block h-0.5 w-8 bg-black" />
             <motion.span animate={{ width: toggle ? 0 : 32 }} className="block h-0.5 w-8 bg-black" />
             <motion.span animate={{ rotateZ: toggle ? -45 : 0, y: toggle ? -8 : 0 }} className="block h-0.5 w-8 bg-black" />

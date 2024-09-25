@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AssetHero from '@/assets/homepage/webp/asset-hero.webp';
 import AssetSekolah from '@/assets/homepage/webp/asset-sekolah.webp';
+import ScrollProgram from '@/components/partials/ScrollProgram/ScrollProgram';
 
 export default function Home(): JSX.Element {
   const scrollToSection = (sectionId: string) => {
@@ -99,6 +100,9 @@ export default function Home(): JSX.Element {
           <Image src={AssetSekolah} alt="Asset Sekolah" className="w-full max-w-xl xl:max-w-2xl rounded-2xl" />
         </div>
       </section>
+
+      {/* Section 4 */}
+      <ScrollProgram />
     </main>
   );
 }
