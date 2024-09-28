@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useMediaQuery } from 'usehooks-ts';
 import { usePathname } from 'next/navigation';
 import { NavLink, navLinks } from '@/constants/navlinks';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import Logo from '@/assets/homepage/svg/logo.svg';
 
@@ -20,6 +20,12 @@ export default function Navbar() {
     setIsClient(true);
   }, []);
 
+  const handleLinkClick = () => {
+    if (!matches) {
+      setToggle(false);
+    }
+  };
+
   if (!isClient) {
     return null;
   }
@@ -32,23 +38,25 @@ export default function Navbar() {
           <h1 className="uppercase font-bold hidden md:block md:text-2xl">sma harapan 3 delitua</h1>
         </Link>
 
-        {matches && (
-          <div className="flex gap-x-10 justify-between">
-            {navLinks.slice(0, 4).map((navlink: NavLink, index: number) => (
-              <Link
-                key={index}
-                href={navlink.path}
-                className={`
-                ${pathname === navlink.path ? 'text-black font-semibold' : 'text-black'} 
-                text-lg hover:font-semibold hover:scale-105 
-                transition-all duration-300 ease-in-out
-              `}
-              >
-                {navlink.name}
-              </Link>
-            ))}
-          </div>
-        )}
+        <AnimatePresence>
+          {matches && (
+            <motion.div className="flex gap-x-10 justify-between" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
+              {navLinks.slice(0, 4).map((navlink: NavLink, index: number) => (
+                <Link
+                  key={index}
+                  href={navlink.path}
+                  className={`
+                  ${pathname === navlink.path ? 'text-black font-semibold' : 'text-black'} 
+                  text-lg transition-all duration-300 ease-in-out
+                `}
+                  onClick={handleLinkClick}
+                >
+                  {navlink.name}
+                </Link>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {matches && (
           <Link href="/kontak" className="bg-primary-600 py-4 px-12 text-white font-medium rounded-full hover:bg-transparent border hover:border-primary-600 hover:text-primary-600 transition-colors duration-300">
@@ -63,6 +71,28 @@ export default function Navbar() {
             <motion.span animate={{ rotateZ: toggle ? -45 : 0, y: toggle ? -8 : 0 }} className="block h-0.5 w-8 bg-black" />
           </div>
         )}
+
+        <AnimatePresence>
+          {!matches && toggle && (
+            <motion.div
+              className="fixed inset-0 z-40 bg-white flex justify-center items-center h-[100vh] overflow-y-auto"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="flex flex-col gap-y-4 text-black">
+                {navLinks.slice(0, 4).map((navlink: NavLink, index: number) => (
+                  <motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} transition={{ duration: 0.3, delay: index * 0.1 }}>
+                    <Link href={navlink.path} className={`${pathname === navlink.path ? 'text-dark font-bold' : 'text-dark'} text-lg hover:font-bold transition-all duration-300`} onClick={handleLinkClick}>
+                      {navlink.name}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
