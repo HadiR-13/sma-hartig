@@ -92,10 +92,10 @@ export default function ScrollProgram(): JSX.Element {
   }, []);
 
   return (
-    <section className="flex flex-col px-4 py-[50px] lg:py-[80px] gap-y-16 z-40">
+    <section className="flex flex-col px-4 py-[50px] lg:py-[80px] gap-y-16 z-30 container">
       <div className="flex flex-col items-center text-center gap-y-3">
-        <h2 className="text-primary-600 lg:text-xl xl:text-2xl font-bold uppercase">program unggulan</h2>
-        <h1 className="uppercase text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">SMA HARAPAN 3 DELITUA</h1>
+        <h2 className="text-primary-600 text-xl xl:text-2xl font-bold uppercase">program unggulan</h2>
+        <h1 className="uppercase text-2xl xl:text-4xl font-bold">SMA HARAPAN 3 DELITUA</h1>
       </div>
       <div className="w-[100%] overflow-x-scroll horizontal-scroll container" ref={scrollContainerRef}>
         <div className="flex w-max gap-x-4 snap-x">
