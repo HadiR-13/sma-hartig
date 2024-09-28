@@ -8,7 +8,7 @@ export default function Footer(): JSX.Element {
   const copyRight = new Date().getFullYear();
   return (
     <>
-      <footer className="flex flex-col bg-primary-600 justify-center items-center py-[50px] gap-y-28">
+      <footer className="flex flex-col bg-primary-600 justify-center items-center py-[50px] gap-y-28 p-5 lg:p-0">
         <div className=" flex flex-col lg:flex-row items-center justify-between w-full max-w-[85rem] gap-y-8 lg:gap-y-0">
           <div className="flex flex-col gap-y-9 w-full">
             <div className="flex gap-x-3 items-center">
