@@ -29,7 +29,9 @@ export default function Home(): JSX.Element {
                   iman, ilmu, dan <span className="text-primary-600">amal</span>
                 </h1>
               </div>
-              <p className="w-full lg:max-w-[34.5rem] leading-7">Lorem ipsum dolor sit amet consectetur. Ut etiam sed dolor ac. Viverra placerat dignissim lorem ac non. Lacus lorem sed enim nisl eu sit. Tortor lacus at egestas nunc.</p>
+              <p className="w-full lg:max-w-[34.5rem] leading-7 text-justify lg:text-start">
+                Lorem ipsum dolor sit amet consectetur. Ut etiam sed dolor ac. Viverra placerat dignissim lorem ac non. Lacus lorem sed enim nisl eu sit. Tortor lacus at egestas nunc.
+              </p>
             </div>
             <div className="flex flex-row gap-x-5">
               <button
@@ -69,7 +71,10 @@ export default function Home(): JSX.Element {
                 excepturi quibusdam voluptatem doloremque ipsum optio?
               </p>
             </div>
-            <Link href="/tentang" className="bg-primary-600 border border-primary-600 px-7 py-3 xl:px-10 xl:py-4 font-semibold text-white rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300 text-center lg:self-start">
+            <Link
+              href="/tentang"
+              className="bg-primary-600 border border-primary-600 px-7 py-3 xl:px-10 xl:py-4 font-semibold text-white rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300 text-center lg:self-start"
+            >
               Selengkapnya
             </Link>
           </div>

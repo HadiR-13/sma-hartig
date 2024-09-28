@@ -18,6 +18,7 @@ const config: Config = {
           700: '#57AD73',
           800: '#237E47',
         },
+        secondary: '#575455',
       },
       container: {
         center: true,
