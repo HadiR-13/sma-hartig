@@ -24,8 +24,4 @@ export const navLinks: NavLink[] = [
     name: 'Galeri',
     path: '/galeri',
   },
-  {
-    name: 'Kontak Kami',
-    path: '/kontak',
-  },
 ];

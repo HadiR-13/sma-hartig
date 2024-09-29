@@ -19,7 +19,6 @@ export default function Page(): JSX.Element {
       </header>
 
       {/* Section */}
-      {/* Section */}
       <div className="flex flex-col overflow-x-hidden py-[30px] items-center justify-center">
         <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-14 w-full">
           {/* konten */}
