@@ -1,4 +1,6 @@
 import { JSX } from 'react';
+import AssetDummyGaleri from '@/assets/galeri/png/asset-dummy-galeri.png';
+import Image from 'next/image';
 
 export default function Page(): JSX.Element {
   return (
@@ -15,6 +17,74 @@ export default function Page(): JSX.Element {
           </p>
         </div>
       </header>
+
+      {/* Section */}
+      {/* Section */}
+      <div className="flex flex-col overflow-x-hidden py-[30px] items-center justify-center">
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-14 w-full">
+          {/* konten */}
+          <div className="w-full flex flex-col gap-y-2">
+            <Image src={AssetDummyGaleri} alt="Asset Dummy Galeri" layout="responsive" width={100} height={100} />
+            <div className="flex flex-row justify-between mt-2">
+              <div className="flex flex-col gap-y-1">
+                <h1 className="font-medium text-lg">Lapangan Basket</h1>
+                <p className="text-secondary text-sm">29 September 2024</p>
+              </div>
+              <h1 className="bg-[#D9D9D9] py-1 px-3 rounded flex flex-col justify-center items-center self-start text-white">SARPRA</h1>
+            </div>
+          </div>
+          <div className="w-full flex flex-col gap-y-2">
+            <Image src={AssetDummyGaleri} alt="Asset Dummy Galeri" layout="responsive" width={100} height={100} />
+            <div className="flex flex-row justify-between mt-2">
+              <div className="flex flex-col gap-y-1">
+                <h1 className="font-medium text-lg">Lapangan Basket</h1>
+                <p className="text-secondary text-sm">29 September 2024</p>
+              </div>
+              <h1 className="bg-[#D9D9D9] py-1 px-3 rounded flex flex-col justify-center items-center self-start text-white">SARPRA</h1>
+            </div>
+          </div>
+          <div className="w-full flex flex-col gap-y-2">
+            <Image src={AssetDummyGaleri} alt="Asset Dummy Galeri" layout="responsive" width={100} height={100} />
+            <div className="flex flex-row justify-between mt-2">
+              <div className="flex flex-col gap-y-1">
+                <h1 className="font-medium text-lg">Lapangan Basket</h1>
+                <p className="text-secondary text-sm">29 September 2024</p>
+              </div>
+              <h1 className="bg-[#D9D9D9] py-1 px-3 rounded flex flex-col justify-center items-center self-start text-white">SARPRA</h1>
+            </div>
+          </div>
+          <div className="w-full flex flex-col gap-y-2">
+            <Image src={AssetDummyGaleri} alt="Asset Dummy Galeri" layout="responsive" width={100} height={100} />
+            <div className="flex flex-row justify-between mt-2">
+              <div className="flex flex-col gap-y-1">
+                <h1 className="font-medium text-lg">Lapangan Basket</h1>
+                <p className="text-secondary text-sm">29 September 2024</p>
+              </div>
+              <h1 className="bg-[#D9D9D9] py-1 px-3 rounded flex flex-col justify-center items-center self-start text-white">SARPRA</h1>
+            </div>
+          </div>
+          <div className="w-full flex flex-col gap-y-2">
+            <Image src={AssetDummyGaleri} alt="Asset Dummy Galeri" layout="responsive" width={100} height={100} />
+            <div className="flex flex-row justify-between mt-2">
+              <div className="flex flex-col gap-y-1">
+                <h1 className="font-medium text-lg">Lapangan Basket</h1>
+                <p className="text-secondary text-sm">29 September 2024</p>
+              </div>
+              <h1 className="bg-[#D9D9D9] py-1 px-3 rounded flex flex-col justify-center items-center self-start text-white">SARPRA</h1>
+            </div>
+          </div>
+          <div className="w-full flex flex-col gap-y-2">
+            <Image src={AssetDummyGaleri} alt="Asset Dummy Galeri" layout="responsive" width={100} height={100} />
+            <div className="flex flex-row justify-between mt-2">
+              <div className="flex flex-col gap-y-1">
+                <h1 className="font-medium text-lg">Lapangan Basket</h1>
+                <p className="text-secondary text-sm">29 September 2024</p>
+              </div>
+              <h1 className="bg-[#D9D9D9] py-1 px-3 rounded flex flex-col justify-center items-center self-start text-white">SARPRA</h1>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
