@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: Readonly<{ children: ReactNode }>): JSX.Element {
-  return <>{children}</>;
+  return <div>{children}</div>;
 }
