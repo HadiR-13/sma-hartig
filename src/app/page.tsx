@@ -6,6 +6,7 @@ import Image from 'next/image';
 import AssetHero from '@/assets/homepage/webp/asset-hero.webp';
 import AssetSekolah from '@/assets/homepage/webp/asset-sekolah.webp';
 import ScrollProgram from '@/components/partials/ScrollProgram/ScrollProgram';
+import ArtikelHomepage from '@/components/partials/Artikel/ArtikelHomepage';
 
 export default function Home(): JSX.Element {
   const scrollToSection = (sectionId: string) => {
@@ -19,7 +20,7 @@ export default function Home(): JSX.Element {
     <main className="">
       {/* Header atau Hero */}
       <header className="flex flex-col overflow-x-hidden py-[30px] lg:py-[80px]">
-        <div className="container flex flex-col lg:flex-row items-center justify-between py-10 px-5 xl:px-10 gap-y-8">
+        <div className="container flex flex-col xl:flex-row items-center justify-between py-10 px-5 xl:px-10 gap-y-8">
           {/* Konten 1 */}
           <div className="flex flex-col gap-y-9 md:gap-y-12">
             <div className="flex flex-col gap-y-4 md:gap-y-6">
@@ -29,7 +30,7 @@ export default function Home(): JSX.Element {
                   iman, ilmu, dan <span className="text-primary-600">amal</span>
                 </h1>
               </div>
-              <p className="w-full lg:max-w-[34.5rem] leading-7 text-justify lg:text-start">
+              <p className="w-full xl:max-w-[34.5rem] leading-7 text-justify lg:text-start">
                 Lorem ipsum dolor sit amet consectetur. Ut etiam sed dolor ac. Viverra placerat dignissim lorem ac non. Lacus lorem sed enim nisl eu sit. Tortor lacus at egestas nunc.
               </p>
             </div>
@@ -53,9 +54,9 @@ export default function Home(): JSX.Element {
 
       {/* Section 2 */}
       <section className="flex flex-col overflow-x-hidden py-[20px] lg:py-[80px]" id="tentang">
-        <div className="container flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 gap-x-0 lg:gap-x-10 lg:py-10 lg:px-10">
+        <div className="container flex flex-col xl:flex-row gap-y-4 xl:gap-y-0 gap-x-0 lg:gap-x-10 lg:py-10 lg:px-10">
           {/* Konten 1 */}
-          <Image src={AssetSekolah} alt="Asset Sekolah" className="w-full xl:max-w-2xl rounded-xl lg:rounded-2xl" />
+          <Image src={AssetSekolah} alt="Asset Sekolah" className="w-full xl:max-w-2xl rounded-xl lg:rounded-2xl object-cover" />
 
           {/* Konten 2 */}
           <div className="flex flex-col gap-y-7">
@@ -83,7 +84,7 @@ export default function Home(): JSX.Element {
 
       {/* Section 3 */}
       <section className="flex flex-col overflow-x-hidden py-[50px] lg:py-[80px]" id="tentang">
-        <div className="container flex flex-col-reverse lg:flex-row gap-y-4 lg:gap-y-0 gap-x-0 lg:gap-x-10 lg:py-10 lg:px-10">
+        <div className="container flex flex-col-reverse xl:flex-row gap-y-4 xl:gap-y-0 gap-x-0 xl:gap-x-10 xl:py-10 xl:px-10">
           {/* Konten 2 */}
           <div className="flex flex-col gap-y-7">
             <div className="flex flex-col gap-y-5">
@@ -108,6 +109,9 @@ export default function Home(): JSX.Element {
 
       {/* Section 4 */}
       <ScrollProgram />
+
+      {/* Section 5 */}
+      <ArtikelHomepage />
     </main>
   );
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import { JSX } from 'react';
 import AssetDummyGaleri from '@/assets/galeri/png/asset-dummy-galeri.png';
 import Image from 'next/image';

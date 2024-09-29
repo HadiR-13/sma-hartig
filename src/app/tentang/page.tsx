@@ -1,3 +1,5 @@
+'use client';
+
 import { JSX } from 'react';
 import Image from 'next/image';
 import AssetTentang from '@/assets/tentang/asset-tentang.webp';

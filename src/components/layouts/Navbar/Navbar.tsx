@@ -82,7 +82,7 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
             >
               <div className="flex flex-col gap-y-4 text-black">
-                {navLinks.slice(0, 3).map((navlink: NavLink, index: number) => (
+                {navLinks.slice(0, 4).map((navlink: NavLink, index: number) => (
                   <motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} transition={{ duration: 0.3, delay: index * 0.1 }}>
                     <Link href={navlink.path} className={`${pathname === navlink.path ? 'text-dark font-bold' : 'text-dark'} text-lg hover:font-bold transition-all duration-300`} onClick={handleLinkClick}>
                       {navlink.name}
