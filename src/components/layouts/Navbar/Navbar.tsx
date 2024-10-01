@@ -55,27 +55,35 @@ export default function Navbar() {
     if (navlink.menus) {
       return (
         <div className="relative group" ref={dropdownRef}>
-          <button onClick={() => handleDropdownToggle(navlink.name)} className={`flex items-center gap-1 text-lg transition-all duration-300 ease-in-out ${isActive ? 'text-black font-semibold' : 'text-black'}`}>
+          <button onClick={() => handleDropdownToggle(navlink.name)} className={`flex items-center gap-1 transition-all duration-300 ease-in-out ${isActive ? 'text-black font-semibold' : 'text-black'}`}>
             {navlink.name}
             <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openDropdown === navlink.name ? 'rotate-180' : ''}`} />
           </button>
-          {openDropdown === navlink.name && (
-            <div className={`${matches ? 'absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5' : 'mt-2'}`}>
-              <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                {navlink.menus.map((submenu, subIndex) => (
-                  <Link
-                    key={subIndex}
-                    href={submenu.path}
-                    className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900 ${pathname === submenu.path ? 'text-primary-600 font-medium' : 'text-gray-700'}`}
-                    role="menuitem"
-                    onClick={handleLinkClick}
-                  >
-                    {submenu.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+          <AnimatePresence>
+            {openDropdown === navlink.name && (
+              <motion.div
+                initial={matches ? { opacity: 0, y: -10 } : { opacity: 0, height: 0 }}
+                animate={matches ? { opacity: 1, y: 0 } : { opacity: 1, height: 'auto' }}
+                exit={matches ? { opacity: 0, y: -10 } : { opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className={`${matches ? 'absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5' : 'mt-2 overflow-hidden'}`}
+              >
+                <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                  {navlink.menus.map((submenu, subIndex) => (
+                    <Link
+                      key={subIndex}
+                      href={submenu.path}
+                      className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900 ${pathname === submenu.path ? 'text-primary-600 font-medium' : 'text-gray-700'}`}
+                      role="menuitem"
+                      onClick={handleLinkClick}
+                    >
+                      {submenu.name}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       );
     }
@@ -84,8 +92,7 @@ export default function Navbar() {
       <Link
         href={navlink.path || '#'}
         className={`
-          ${isActive ? 'text-black font-semibold' : 'text-black'} 
-          text-lg transition-all duration-300 ease-in-out
+          ${isActive ? 'text-black font-semibold' : 'text-black'} transition-all duration-300 ease-in-out
         `}
         onClick={handleLinkClick}
       >

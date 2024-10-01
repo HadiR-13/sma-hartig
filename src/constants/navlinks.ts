@@ -35,6 +35,10 @@ export const navLinks: NavLink[] = [
         name: 'Artikel',
         path: '/akademik/artikel',
       },
+      {
+        name: 'PSB',
+        path: 'https://psb.harapan.ac.id/',
+      },
     ],
   },
   {
