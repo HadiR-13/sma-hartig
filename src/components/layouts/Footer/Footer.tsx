@@ -12,7 +12,7 @@ export default function Footer(): JSX.Element {
         <div className="flex flex-col gap-y-9 w-full">
           <div className="flex gap-x-3 items-center">
             <Image src={Logo} alt="Logo" className="w-[65px] h-[65px]" />
-            <h1 className="uppercase font-bold text-white text-xl">sma harapan 3 delitua</h1>
+            <h1 className="uppercase font-bold text-white text-xl">sma harapan 3 medan</h1>
           </div>
           <p className="text-white font-medium text-justify w-full lg:w-[40%]">Lorem ipsum dolor sit amet diam consectetur. Ut purus facilisis quam turpis.</p>
           <div className="flex flex-row gap-x-3">

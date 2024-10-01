@@ -13,7 +13,7 @@ export default function Page(): JSX.Element {
         <div className="container flex flex-col items-center justify-center gap-y-[50px] py-10 px-5 xl:px-10">
           <div className="text-center font-bold gap-y-2 flex flex-col">
             <h3 className="uppercase text-xl lg:text-2xl text-primary-600">tentang kami</h3>
-            <h1 className="uppercase text-2xl lg:text-4xl">sma harapan 3 delitua</h1>
+            <h1 className="uppercase text-2xl lg:text-4xl">sma harapan 3 medan</h1>
           </div>
           <Image src={AssetTentang} alt="Asset Tentang" className="rounded-[20px] bg-cover"></Image>
         </div>
@@ -26,7 +26,7 @@ export default function Page(): JSX.Element {
           <div className="flex flex-col gap-y-9">
             <div className="text-center font-bold gap-y-2 flex flex-col">
               <h3 className="uppercase text-xl lg:text-2xl text-primary-600">menciptakan keunggulan</h3>
-              <h1 className="uppercase text-2xl lg:text-4xl">perjalanan sma harapan 3 delitua</h1>
+              <h1 className="uppercase text-2xl lg:text-4xl">perjalanan sma harapan 3 medan</h1>
             </div>
             <p className="text-justify lg:text-center leading-7 text-secondary">
               Lorem ipsum dolor sit amet consectetur. In feugiat fusce est pellentesque dolor sit cursus non id. Et mi aliquam nec laoreet tempor magna mattis. Sit ut in facilisis vulputate. Tortor vitae id nulla sed eget. Ut ac gravida

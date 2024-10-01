@@ -26,7 +26,7 @@ export default function Home(): JSX.Element {
           <div className="flex flex-col gap-y-9 md:gap-y-12">
             <div className="flex flex-col gap-y-4 md:gap-y-6">
               <div className="flex flex-col gap-y-2">
-                <h2 className="font-bold uppercase text-xl xl:text-2xl">sma harapan 3 delitua</h2>
+                <h2 className="font-bold uppercase text-xl xl:text-2xl">sma harapan 3 medan</h2>
                 <h1 className="font-bold uppercase text-4xl xl:text-5xl">
                   iman, ilmu, dan <span className="text-primary-600">amal</span>
                 </h1>
@@ -64,7 +64,7 @@ export default function Home(): JSX.Element {
             <div className="flex flex-col gap-y-5">
               <div className="flex flex-col gap-y-2">
                 <h2 className="font-bold uppercase text-xl xl:text-2xl text-primary-600 text-center lg:text-start">tentang sekolah</h2>
-                <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 delitua</h1>
+                <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 medan</h1>
               </div>
               <p className="w-full xl:max-w-xl text-justify leading-[1.60]">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi voluptate exercitationem minima quas dolores praesentium quo corrupti ullam, enim consequatur ea odio autem neque officia ducimus, voluptatibus sit aliquid
@@ -91,7 +91,7 @@ export default function Home(): JSX.Element {
             <div className="flex flex-col gap-y-5">
               <div className="flex flex-col gap-y-2">
                 <h2 className="font-bold uppercase text-xl xl:text-2xl text-primary-600 text-center lg:text-start">prakata kepala sekolah</h2>
-                <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 delitua</h1>
+                <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 medan</h1>
               </div>
               <p className="w-full xl:max-w-xl text-justify leading-[1.60]">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi voluptate exercitationem minima quas dolores praesentium quo corrupti ullam, enim consequatur ea odio autem neque officia ducimus, voluptatibus sit aliquid
