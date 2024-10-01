@@ -66,7 +66,7 @@ export default function Navbar() {
                   <Link
                     key={subIndex}
                     href={submenu.path}
-                    className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900 ${pathname === submenu.path ? 'text-primary-600 font-semibold' : 'text-gray-700'}`}
+                    className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900 ${pathname === submenu.path ? 'text-primary-600 font-medium' : 'text-gray-700'}`}
                     role="menuitem"
                     onClick={handleLinkClick}
                   >

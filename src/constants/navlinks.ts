@@ -24,8 +24,16 @@ export const navLinks: NavLink[] = [
         path: '/akademik/guru',
       },
       {
-        name: 'Fasilitas',
-        path: '/akademik/fasilitas',
+        name: 'Sarana Prasarana',
+        path: '/akademik/sarpra',
+      },
+      {
+        name: 'Ekstrakurikuler',
+        path: '/akademik/ekstrakurikuler',
+      },
+      {
+        name: 'Artikel',
+        path: '/akademik/artikel',
       },
     ],
   },
