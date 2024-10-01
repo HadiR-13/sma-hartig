@@ -25,7 +25,7 @@ export default function ArtikelHomepage(): JSX.Element {
                 voluptates unde numquam? Odit, assumenda.
               </p>
             </div>
-            <Link href="#" className="text-white bg-primary-600 rounded-full text-center xl:self-start px-14 py-4">
+            <Link href="#" className="bg-primary-600 border border-primary-600 px-7 py-3 xl:px-10 xl:py-4 font-semibold text-white rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300 text-center lg:self-start">
               Baca artikel
             </Link>
           </div>

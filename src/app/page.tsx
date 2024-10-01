@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AssetHero from '@/assets/homepage/webp/asset-hero.webp';
 import AssetSekolah from '@/assets/homepage/webp/asset-sekolah.webp';
+import AssetKepsek from '@/assets/homepage/webp/asset-kepsek.webp';
 import ScrollProgram from '@/components/partials/ScrollProgram/ScrollProgram';
 import ArtikelHomepage from '@/components/partials/Artikel/ArtikelHomepage';
 
@@ -103,7 +104,7 @@ export default function Home(): JSX.Element {
           </div>
 
           {/* Konten 1 */}
-          <Image src={AssetSekolah} alt="Asset Sekolah" className="w-full xl:max-w-2xl rounded-2xl" />
+          <Image src={AssetKepsek} alt="Asset Sekolah" className="w-full xl:max-w-2xl rounded-2xl" />
         </div>
       </section>
 
