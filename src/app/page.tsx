@@ -31,9 +31,7 @@ export default function Home(): JSX.Element {
                   iman, ilmu, dan <span className="text-primary-600">amal</span>
                 </h1>
               </div>
-              <p className="w-full xl:max-w-[34.5rem] leading-7 text-justify lg:text-start">
-                Lorem ipsum dolor sit amet consectetur. Ut etiam sed dolor ac. Viverra placerat dignissim lorem ac non. Lacus lorem sed enim nisl eu sit. Tortor lacus at egestas nunc.
-              </p>
+              <p className="w-full xl:max-w-[34.5rem] leading-7 text-justify lg:text-start">Sebagai upaya dalam membangun masa depan yang lebih baik, kami berkomitmen untuk memberikan kegiatan belajar mengajar yang optimal.</p>
             </div>
             <div className="flex flex-row gap-x-5">
               <button
@@ -61,8 +59,8 @@ export default function Home(): JSX.Element {
 
           {/* Konten 2 */}
           <div className="flex flex-col gap-y-7">
-            <div className="flex flex-col gap-y-5">
-              <div className="flex flex-col gap-y-2">
+            <div className="flex flex-col gap-y-4">
+              <div className="flex flex-col gap-y-1">
                 <h2 className="font-bold uppercase text-xl xl:text-2xl text-primary-600 text-center lg:text-start">tentang sekolah</h2>
                 <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 medan</h1>
               </div>
@@ -88,17 +86,16 @@ export default function Home(): JSX.Element {
         <div className="container flex flex-col-reverse xl:flex-row gap-y-4 xl:gap-y-0 gap-x-0 xl:gap-x-10 xl:py-10 xl:px-10">
           {/* Konten 2 */}
           <div className="flex flex-col gap-y-7">
-            <div className="flex flex-col gap-y-5">
-              <div className="flex flex-col gap-y-2">
+            <div className="flex flex-col gap-y-4">
+              <div className="flex flex-col gap-y-1">
                 <h2 className="font-bold uppercase text-xl xl:text-2xl text-primary-600 text-center lg:text-start">prakata kepala sekolah</h2>
                 <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 medan</h1>
               </div>
               <p className="w-full xl:max-w-xl text-justify leading-[1.60]">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi voluptate exercitationem minima quas dolores praesentium quo corrupti ullam, enim consequatur ea odio autem neque officia ducimus, voluptatibus sit aliquid
-                architecto. At dolorem ducimus incidunt explicabo voluptate ipsa voluptatem pariatur quae. Doloribus nostrum libero magni repellat autem odit officiis. Voluptas quod pariatur doloremque unde maiores ipsum deserunt facilis,
-                nulla dolorem repudiandae saepe eligendi laboriosam exercitationem, expedita omnis provident tenetur deleniti ut a quam sequi officiis! Veniam iure ratione odit deleniti facilis? Quasi consequatur exercitationem asperiores
-                excepturi quibusdam voluptatem doloremque ipsum optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ab! Lorem ipsum dolor sit amet consectetur adipisicing elit. At vel aspernatur magnam dolore facilis
-                eos!
+                Program Pendidikan kami tidak hanya berfokus pada akademik, tetapi juga pada pengembangan karakter dan keterampilan interpersonal. Kami percaya bahwa kesuksesan tidak hanya tentang pengetahuan, tetapi juga memerlukan
+                keterampilan komunikasi, empati, dan kepemimpinan. Kurikulum kami dirancang untuk mengoptimalkan potensi siswa secara menyeluruh. Dari mata pelajaran inti seperti Matematika, Bahasa Inggris, dan Ilmu Pengetahuan, hingga
+                program spesial seperti Kedokteran. Kami memastikan bahwa pendidikan yang diberikan relevan dengan kebutuhan masa depan. Kelas Fokus Kedokteran kami merupakan yang pertama di Indonesia, dirancang untuk menghasilkan tenaga
+                medis yang siap menghadapi tantangan kesehatan Indonesia. Metode pengajaran kami juga berlandaskan pada kurikulum merdeka, yang memberikan kebebasan bagi siswa untuk lebih berkembang.
               </p>
             </div>
           </div>
