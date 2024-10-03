@@ -13,6 +13,18 @@ import AssetGuru11 from '@/assets/guru/asset-guru-guru-11.webp';
 import AssetGuru12 from '@/assets/guru/asset-guru-guru-12.webp';
 import AssetGuru13 from '@/assets/guru/asset-guru-guru-13.webp';
 import AssetGuru14 from '@/assets/guru/asset-guru-guru-14.webp';
+import AssetGuru15 from '@/assets/guru/asset-guru-guru-15.webp';
+import AssetGuru16 from '@/assets/guru/asset-guru-guru-16.webp';
+import AssetGuru17 from '@/assets/guru/asset-guru-guru-17.webp';
+import AssetGuru18 from '@/assets/guru/asset-guru-guru-18.webp';
+import AssetGuru19 from '@/assets/guru/asset-guru-guru-19.webp';
+import AssetGuru20 from '@/assets/guru/asset-guru-guru-20.webp';
+import AssetGuru21 from '@/assets/guru/asset-guru-guru-21.webp';
+import AssetGuru22 from '@/assets/guru/asset-guru-guru-22.webp';
+import AssetGuru23 from '@/assets/guru/asset-guru-guru-23.webp';
+import AssetGuru24 from '@/assets/guru/asset-guru-guru-24.webp';
+import AssetGuru25 from '@/assets/guru/asset-guru-guru-25.webp';
+import AssetGuru26 from '@/assets/guru/asset-guru-guru-26.webp';
 
 export type Guru = {
   name: string;
@@ -27,73 +39,133 @@ export const gurus = [
     image: AssetKepsek.src,
   },
   {
-    name: 'Guru 1',
-    position: 'Guru Bahasa',
+    name: 'Muhammad Nur, S.Pd',
+    position: 'WKS 2, Matematika',
     image: AssetGuru1.src,
   },
   {
-    name: 'Guru 2',
-    position: 'Guru Matematika',
+    name: 'Mahyudanil Azmi, M.Pd',
+    position: 'Matematika',
     image: AssetGuru2.src,
   },
   {
-    name: 'Guru 3',
-    position: 'Guru Fisika',
+    name: 'M. Basyir Ridho Rangkuti, S.Pd',
+    position: 'PKN',
     image: AssetGuru3.src,
   },
   {
-    name: 'Guru 4',
-    position: 'Guru Biologi',
+    name: 'Nurbaiti Lubis, S.Ag',
+    position: 'Agama',
     image: AssetGuru4.src,
   },
   {
-    name: 'Guru 5',
-    position: 'Guru Kimia',
+    name: 'Asmawati, M.Pd',
+    position: 'B. Indo',
     image: AssetGuru5.src,
   },
   {
-    name: 'Guru 6',
-    position: 'Guru Sejarah',
+    name: 'Wahyo, M.Pd',
+    position: 'Penjas, Operator sekolah',
     image: AssetGuru6.src,
   },
   {
-    name: 'Guru 7',
-    position: 'Guru Geografi',
+    name: 'Nabila Adinda, S.Sos',
+    position: 'Sosiologi',
     image: AssetGuru7.src,
   },
   {
-    name: 'Guru 8',
-    position: 'Guru Ekonomi',
+    name: 'Mariana Widya, S.Pd',
+    position: 'Kimia',
     image: AssetGuru8.src,
   },
   {
-    name: 'Guru 9',
-    position: 'Guru Sosiologi',
+    name: 'Emena Gorya, S.Psi',
+    position: 'BK',
     image: AssetGuru9.src,
   },
   {
-    name: 'Guru 10',
-    position: 'Guru Agama',
+    name: 'Wahyu Hidayah, S.Pd',
+    position: 'WKS 3, Biologi',
     image: AssetGuru10.src,
   },
   {
-    name: 'Guru 11',
-    position: 'Guru Seni Budaya',
+    name: 'Drs. H. Bambang Laksono',
+    position: 'Agama',
     image: AssetGuru11.src,
   },
   {
-    name: 'Guru 12',
-    position: 'Guru Olahraga',
+    name: 'Fitra Insana, S.Pd',
+    position: 'Sejarah',
     image: AssetGuru12.src,
   },
   {
-    name: 'Guru 13',
-    position: 'Guru Bahasa Inggris',
+    name: 'Yolanda Pratiwi, S.Si',
+    position: 'Admin Fokus',
     image: AssetGuru13.src,
   },
   {
-    name: 'Guru 14',
-    position: 'Guru Bahasa Jepang',
+    name: 'Eli Oktaviana, S.PdI',
+    position: 'Matematika',
     image: AssetGuru14.src,
+  },
+  {
+    name: 'Guru 15',
+    position: 'PKN',
+    image: AssetGuru15.src,
+  },
+  {
+    name: 'Guru 16',
+    position: 'PKN',
+    image: AssetGuru16.src,
+  },
+  {
+    name: 'Guru 17',
+    position: 'PKN',
+    image: AssetGuru17.src,
+  },
+  {
+    name: 'Guru 18',
+    position: 'PKN',
+    image: AssetGuru18.src,
+  },
+  {
+    name: 'Guru 19',
+    position: 'PKN',
+    image: AssetGuru19.src,
+  },
+  {
+    name: 'Guru 20',
+    position: 'PKN',
+    image: AssetGuru20.src,
+  },
+  {
+    name: 'Guru 21',
+    position: 'PKN',
+    image: AssetGuru21.src,
+  },
+  {
+    name: 'Guru 22',
+    position: 'PKN',
+    image: AssetGuru22.src,
+  },
+  {
+    name: 'Guru 23',
+    position: 'PKN',
+    image: AssetGuru23.src,
+  },
+  {
+    name: 'Guru 24',
+    position: 'PKN',
+    image: AssetGuru24.src,
+  },
+  {
+    name: 'Guru 25',
+    position: 'PKN',
+    image: AssetGuru25.src,
+  },
+  {
+    name: 'Guru 26',
+    position: 'PKN',
+    image: AssetGuru26.src,
   },
 ];
