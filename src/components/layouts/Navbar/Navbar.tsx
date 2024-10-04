@@ -106,7 +106,7 @@ export default function Navbar() {
       <div className="w-full max-w-[83rem] py-4 lg:py-8 mx-auto lg:mx-7 2xl:mx-auto px-5 md:px-2 flex justify-between items-center">
         <Link href="/" className="flex gap-x-4 items-center">
           <Image src={Logo} alt="Logo" className="text-black" />
-          <h1 className="uppercase font-bold hidden md:block md:text-2xl text-black">sma harapan 3 medan</h1>
+          <h1 className="uppercase font-bold hidden md:block md:text-2xl text-black">sma harapan 3</h1>
         </Link>
 
         <AnimatePresence>
@@ -120,7 +120,10 @@ export default function Navbar() {
         </AnimatePresence>
 
         {matches && (
-          <Link href="#" className="bg-primary-600 py-4 px-12 text-white font-medium rounded-full hover:bg-transparent border hover:border-primary-600 hover:text-primary-600 transition-colors duration-300">
+          <Link
+            href="https://wa.me/6281376055359?text=Halo admin, saya ingin berbicara lebih lanjut mengenahi sma harapan 3"
+            className="bg-primary-600 py-4 px-12 text-white font-medium rounded-full hover:bg-transparent border hover:border-primary-600 hover:text-primary-600 transition-colors duration-300"
+          >
             Kontak Kami
           </Link>
         )}

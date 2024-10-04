@@ -26,9 +26,9 @@ export default function Home(): JSX.Element {
           <div className="flex flex-col gap-y-9 md:gap-y-12">
             <div className="flex flex-col gap-y-4 md:gap-y-6">
               <div className="flex flex-col gap-y-2">
-                <h2 className="font-bold uppercase text-xl xl:text-2xl">sma harapan 3 medan</h2>
+                <h2 className="font-bold uppercase text-xl xl:text-2xl">sma harapan 3</h2>
                 <h1 className="font-bold uppercase text-4xl xl:text-5xl">
-                  iman, ilmu, dan <span className="text-primary-600">amal</span>
+                  sekolah para <span className="text-primary-600">juara</span>
                 </h1>
               </div>
               <p className="w-full xl:max-w-[34.5rem] leading-7 text-justify lg:text-start">Sebagai upaya dalam membangun masa depan yang lebih baik, kami berkomitmen untuk memberikan kegiatan belajar mengajar yang optimal.</p>
@@ -40,7 +40,10 @@ export default function Home(): JSX.Element {
               >
                 Tentang Kami
               </button>
-              <Link href="/kontak" className="bg-white border border-primary-600 px-7 py-3 xl:px-10 xl:py-4 font-semibold text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-colors duration-300">
+              <Link
+                href="https://wa.me/6281376055359?text=Halo admin, saya ingin berbicara lebih lanjut mengenahi sma harapan 3"
+                className="bg-white border border-primary-600 px-7 py-3 xl:px-10 xl:py-4 font-semibold text-primary-600 rounded-full hover:bg-primary-600 hover:text-white transition-colors duration-300"
+              >
                 Kontak Kami
               </Link>
             </div>
@@ -62,13 +65,12 @@ export default function Home(): JSX.Element {
             <div className="flex flex-col gap-y-4">
               <div className="flex flex-col gap-y-1">
                 <h2 className="font-bold uppercase text-xl xl:text-2xl text-primary-600 text-center lg:text-start">tentang sekolah</h2>
-                <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 medan</h1>
+                <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 </h1>
               </div>
               <p className="w-full xl:max-w-xl text-justify leading-[1.60]">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi voluptate exercitationem minima quas dolores praesentium quo corrupti ullam, enim consequatur ea odio autem neque officia ducimus, voluptatibus sit aliquid
-                architecto. At dolorem ducimus incidunt explicabo voluptate ipsa voluptatem pariatur quae. Doloribus nostrum libero magni repellat autem odit officiis. Voluptas quod pariatur doloremque unde maiores ipsum deserunt facilis,
-                nulla dolorem repudiandae saepe eligendi laboriosam exercitationem, expedita omnis provident tenetur deleniti ut a quam sequi officiis! Veniam iure ratione odit deleniti facilis? Quasi consequatur exercitationem asperiores
-                excepturi quibusdam voluptatem doloremque ipsum optio?
+                SMA Harapan 3 didirikan pada tahun 1991 dengan tujuan mengembangkan siswa secara akademis dan karakter. Sekolah ini fokus pada keseimbangan prestasi akademik dan keterampilan hidup. Program pengembangan keterampilan hidup
+                mencakup kepemimpinan dan kerja tim. Selain itu, siswa diajarkan berpikir kritis dan adaptif terhadap perubahan zaman. Sekolah ini juga menekankan pendidikan moral sebagai dasar karakter. Kegiatan ekstrakurikuler membantu
+                mengasah keterampilan non-akademik. SMA Harapan 3 berupaya menciptakan lingkungan yang mendukung pengembangan potensi siswa.
               </p>
             </div>
             <Link
@@ -89,7 +91,7 @@ export default function Home(): JSX.Element {
             <div className="flex flex-col gap-y-4">
               <div className="flex flex-col gap-y-1">
                 <h2 className="font-bold uppercase text-xl xl:text-2xl text-primary-600 text-center lg:text-start">prakata kepala sekolah</h2>
-                <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 medan</h1>
+                <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 </h1>
               </div>
               <p className="w-full xl:max-w-xl text-justify leading-[1.60]">
                 Program Pendidikan kami tidak hanya berfokus pada akademik, tetapi juga pada pengembangan karakter dan keterampilan interpersonal. Kami percaya bahwa kesuksesan tidak hanya tentang pengetahuan, tetapi juga memerlukan

@@ -12,17 +12,17 @@ export default function Footer(): JSX.Element {
         <div className="flex flex-col gap-y-9 w-full">
           <div className="flex gap-x-3 items-center">
             <Image src={Logo} alt="Logo" className="w-[65px] h-[65px]" />
-            <h1 className="uppercase font-bold text-white text-xl">sma harapan 3 medan</h1>
+            <h1 className="uppercase font-bold text-white text-xl">sma harapan 3</h1>
           </div>
           <p className="text-white font-medium text-justify w-full lg:w-[40%]">Lorem ipsum dolor sit amet diam consectetur. Ut purus facilisis quam turpis.</p>
           <div className="flex flex-row gap-x-3">
-            <Link href="/" className="bg-white text-primary-600 rounded-full p-3">
+            <Link href="https://www.instagram.com/smaharapan_3/" className="bg-white text-primary-600 rounded-full p-3">
               <Instagram className="w-[29px] h-[29px]" />
             </Link>
-            <Link href="/" className="bg-white text-primary-600 rounded-full p-3">
+            <Link href="https://www.facebook.com/smaharapan3/" className="bg-white text-primary-600 rounded-full p-3">
               <Facebook className="w-[29px] h-[29px]" />
             </Link>
-            <Link href="/" className="bg-white text-primary-600 rounded-full p-3">
+            <Link href="https://www.youtube.com/@smaharapan3259" className="bg-white text-primary-600 rounded-full p-3">
               <Youtube className="w-[29px] h-[29px]" />
             </Link>
           </div>
@@ -34,31 +34,28 @@ export default function Footer(): JSX.Element {
               <Link href="/" className="text-white">
                 Beranda
               </Link>
-              <Link href="/" className="text-white">
+              <Link href="/tentang" className="text-white">
                 Tentang
               </Link>
-              <Link href="/" className="text-white">
+              <Link href="/galeri" className="text-white">
                 Galeri
-              </Link>
-              <Link href="/" className="text-white">
-                Kontak
               </Link>
             </div>
           </div>
           <div className="flex flex-col gap-y-4">
             <h3 className="font-semibold text-white">Sub Menu</h3>
             <div className="flex flex-col gap-y-3">
-              <Link href="/" className="text-white">
-                Beranda
+              <Link href="/akademik/guru" className="text-white">
+                Guru
               </Link>
-              <Link href="/" className="text-white">
-                Tentang
+              <Link href="/sarpra" className="text-white">
+                Sarpra
               </Link>
-              <Link href="/" className="text-white">
-                Galeri
+              <Link href="/ekstrakurikuler" className="text-white">
+                Ekstrakurikuler
               </Link>
-              <Link href="/" className="text-white">
-                Kontak
+              <Link href="/artikel" className="text-white">
+                artikel
               </Link>
             </div>
           </div>
@@ -77,13 +74,13 @@ export default function Footer(): JSX.Element {
                 <Sms color="#fff" size="30" />
                 <span>admin@harapan.ac.id</span>
               </Link>
-              <Link href="/" className="flex gap-x-3 items-center text-white">
+              <Link href="https://wa.me/6281376055359?text=Halo admin, saya ingin berbicara lebih lanjut mengenahi sma harapan 3" className="flex gap-x-3 items-center text-white">
                 <Call color="#fff" size="30" />
-                <span>(061) 4567890</span>
+                <span>081376055359</span>
               </Link>
-              <Link href="/" className="flex gap-x-3 items-center text-white">
+              <Link href="https://wa.me/6281376055359?text=Halo admin, saya ingin berbicara lebih lanjut mengenahi sma harapan 3" className="flex gap-x-3 items-center text-white">
                 <Whatsapp color="#fff" size="30" />
-                <span>081234567890</span>
+                <span>081376055359</span>
               </Link>
             </div>
           </div>

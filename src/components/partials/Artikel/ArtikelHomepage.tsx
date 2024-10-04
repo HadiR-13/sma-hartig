@@ -10,7 +10,7 @@ export default function ArtikelHomepage(): JSX.Element {
     <section className="flex flex-col px-4 py-[50px] lg:py-[80px] gap-y-16 z-30 container">
       <div className="flex flex-col items-center text-center gap-y-3">
         <h2 className="text-primary-600 text-xl xl:text-2xl font-bold uppercase">berita dan artikel</h2>
-        <h1 className="uppercase text-2xl xl:text-4xl font-bold">SMA HARAPAN 3 medan</h1>
+        <h1 className="uppercase text-2xl xl:text-4xl font-bold">SMA HARAPAN 3</h1>
       </div>
       <div className="flex flex-col gap-y-7">
         <div className="flex flex-col xl:flex-row gap-y-7 xl:gap-x-14 items-center justify-center">
