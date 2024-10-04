@@ -1,6 +1,7 @@
 'use client';
 
 import { JSX, useEffect, useRef } from 'react';
+import { programUnggulan, programUnggulans } from '@/constants/program-unggulan';
 import '../ScrollProgram/ScrollProgram.css';
 
 export default function ScrollProgram(): JSX.Element {
@@ -99,14 +100,12 @@ export default function ScrollProgram(): JSX.Element {
       </div>
       <div className="w-[100%] overflow-x-scroll horizontal-scroll container" ref={scrollContainerRef}>
         <div className="flex w-max gap-x-4 snap-x">
-          {Array(8)
-            .fill(0)
-            .map((_, idx) => (
-              <figure key={idx} className="item snap-center rounded-xl">
-                <img src="/png/dummy-program.png" alt="dummy" className="w-[100%] h-[100%] object-cover object-center" />
-                <figcaption className="uppercase font-medium">pengembangan keterampilan teknologi</figcaption>
-              </figure>
-            ))}
+          {programUnggulans.map((program, idx) => (
+            <figure key={idx} className="item snap-center rounded-xl">
+              <img src={program.image} alt={program.name} className="w-[100%] h-[100%] object-cover object-center" />
+              <figcaption className="uppercase font-medium">{program.name}</figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>
