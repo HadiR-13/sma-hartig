@@ -6,22 +6,22 @@ export type programUnggulan = {
 export const programUnggulans: programUnggulan[] = [
   {
     name: 'Kelas Fokus kedokteran, kedinasan dan PTN terbaik dalam dan luar negeri',
-    image: '/png/dummy-program.png',
+    image: '/png/asset-fokus-kedokteran.png',
   },
   {
     name: 'Kurikulum Cambridge',
-    image: '/png/dummy-program.png',
+    image: '/png/asset-kurikulum-cambridge.png',
   },
   {
     name: 'Kurikulum Penggerak',
-    image: '/png/dummy-program.png',
+    image: '/png/asset-kurikulum-penggerak.png',
   },
   {
     name: 'Pertukaran Guru dan Siswa',
-    image: '/png/dummy-program.png',
+    image: '/png/asset-pertukaran-siswa.png',
   },
   {
     name: 'Kunjugan Kampus',
-    image: '/png/dummy-program.png',
+    image: '/png/asset-kunjungan-kampus.png',
   },
 ];

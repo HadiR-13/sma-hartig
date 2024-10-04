@@ -102,7 +102,7 @@ export default function ScrollProgram(): JSX.Element {
         <div className="flex w-max gap-x-4 snap-x">
           {programUnggulans.map((program, idx) => (
             <figure key={idx} className="item snap-center rounded-xl">
-              <img src={program.image} alt={program.name} className="w-[100%] h-[100%] object-cover object-center" />
+              <img src={program.image} alt={program.name} className="w-[360px] h-[391px] object-cover object-center" />
               <figcaption className="uppercase font-medium">{program.name}</figcaption>
             </figure>
           ))}
