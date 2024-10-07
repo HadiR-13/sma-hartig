@@ -14,7 +14,7 @@ export default function Footer(): JSX.Element {
             <Image src={Logo} alt="Logo" className="w-[65px] h-[65px]" />
             <h1 className="uppercase font-bold text-white text-xl">sma harapan 3</h1>
           </div>
-          <p className="text-white font-medium text-justify w-full lg:w-[40%]">Lorem ipsum dolor sit amet diam consectetur. Ut purus facilisis quam turpis.</p>
+          <p className="text-white font-medium text-justify w-full lg:w-[40%]">Sebagai upaya dalam membangun masa depan yang lebih baik, kami berkomitmen untuk memberikan kegiatan belajar mengajar yang optimal.</p>
           <div className="flex flex-row gap-x-3">
             <Link href="https://www.instagram.com/smaharapan_3/" className="bg-white text-primary-600 rounded-full p-3">
               <Instagram className="w-[29px] h-[29px]" />

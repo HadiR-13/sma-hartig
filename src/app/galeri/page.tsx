@@ -15,7 +15,7 @@ export default function Page(): JSX.Element {
             <h1 className="uppercase text-2xl lg:text-4xl">sma harapan 3 </h1>
           </div>
           <p className="text-justify lg:text-center w-full lg:w-[80%] text-secondary leading-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt mollitia eos quibusdam necessitatibus dolores voluptates. Reiciendis doloribus, animi repellendus labore aspernatur cum aliquid enim, ipsa modi deserunt quam?
+            Melalui galeri ini, kami berbagi momen-momen berharga yang telah kami abadikan. Dari kegiatan belajar mengajar, ekstrakurikuler, hingga kegiatan-kegiatan lainnya yang kami selenggarakan.
           </p>
         </div>
       </header>

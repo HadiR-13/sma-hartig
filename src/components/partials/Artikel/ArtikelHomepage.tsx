@@ -31,7 +31,7 @@ export default function ArtikelHomepage(): JSX.Element {
             <div className="flex flex-col justify-between gap-y-6">
               <div className="flex flex-col gap-y-3">
                 <h3 className="font-medium">{previewArticles[0].date}</h3>
-                <h1 className="text-3xl uppercase font-extrabold">{previewArticles[0].title}</h1>
+                <h1 className="text-xl md:text-3xl uppercase font-extrabold">{previewArticles[0].title}</h1>
                 <p className="text-justify w-full leading-7">{previewArticles[0].content.slice(0, 400)}...</p>
               </div>
 
