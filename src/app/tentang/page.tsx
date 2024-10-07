@@ -3,7 +3,9 @@
 import { JSX } from 'react';
 import Image from 'next/image';
 import AssetTentang from '@/assets/tentang/asset-tentang.webp';
-import AssetDummyTentang from '@/assets/tentang/asset-dummy-tentang.webp';
+import AssetVisi from '@/assets/tentang/asset-visi.webp';
+import AssetMisi from '@/assets/tentang/asset-misi.webp';
+import AssetTujuan from '@/assets/tentang/asset-tujuan.webp';
 
 export default function Page(): JSX.Element {
   return (
@@ -38,7 +40,7 @@ export default function Page(): JSX.Element {
           <div className="flex flex-col gap-y-[20px] lg:gap-y-[65px]">
             {/* Konten 1 */}
             <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 gap-x-0 lg:gap-x-9 items-center justify-center">
-              <Image src={AssetDummyTentang} alt="Asset Dummy Tentang" className="w-full max-w-xl xl:max-w-2xl rounded-2xl"></Image>
+              <Image src={AssetVisi} alt="Asset Dummy Tentang" className="w-full max-w-xl rounded-2xl"></Image>
               <div className="flex flex-col gap-y-6">
                 <h1 className="font-bold text-2xl text-center lg:text-start lg:text-3xl uppercase">visi dari sma harapan 3</h1>
                 <p className="leading-8 text-secondary text-justify">
@@ -50,7 +52,7 @@ export default function Page(): JSX.Element {
             </div>
             {/* Konten 2 */}
             <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 gap-x-0 lg:gap-x-9 items-center justify-center">
-              <Image src={AssetDummyTentang} alt="Asset Dummy Tentang" className="w-full max-w-xl xl:max-w-2xl rounded-2xl"></Image>
+              <Image src={AssetMisi} alt="Asset Dummy Tentang" className="w-full max-w-xl rounded-2xl"></Image>
               <div className="flex flex-col gap-y-6">
                 <h1 className="font-bold text-2xl text-center lg:text-start lg:text-3xl uppercase">MISI DARI SMA HARAPAN 3</h1>
                 <p className="leading-8 text-secondary text-justify">
@@ -62,7 +64,7 @@ export default function Page(): JSX.Element {
             </div>
             {/* Konten 3 */}
             <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 gap-x-0 lg:gap-x-9 items-center justify-center">
-              <Image src={AssetDummyTentang} alt="Asset Dummy Tentang" className="w-full max-w-xl xl:max-w-2xl rounded-2xl"></Image>
+              <Image src={AssetTujuan} alt="Asset Dummy Tentang" className="w-full max-w-xl rounded-2xl"></Image>
               <div className="flex flex-col gap-y-6">
                 <h1 className="font-bold text-2xl text-center lg:text-start lg:text-3xl uppercase">TUJUAN DARI SMA HARAPAN 3</h1>
                 <p className="leading-8 text-secondary text-justify">

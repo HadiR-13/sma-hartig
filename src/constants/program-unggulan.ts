@@ -5,7 +5,7 @@ export type programUnggulan = {
 
 export const programUnggulans: programUnggulan[] = [
   {
-    name: 'Kelas Fokus kedokteran, kedinasan dan PTN terbaik dalam dan luar negeri',
+    name: 'Kelas Fokus Unggulan',
     image: '/png/asset-fokus-kedokteran.png',
   },
   {
