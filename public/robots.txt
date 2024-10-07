@@ -1,0 +1,16 @@
+# https://smaharapan3.sch.id/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /login
+Disallow: /api/
+
+# Crawl delay
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://smaharapan3.sch.id/sitemap.xml
