@@ -34,9 +34,14 @@ export type Guru = {
 
 export const gurus = [
   {
-    name: 'Pak Marwan',
+    name: 'Surya Hadi Marwan, S.Pd',
     position: 'Kepala Sekolah',
     image: AssetKepsek.src,
+  },
+  {
+    name: 'Sulton, S.T',
+    position: 'WKS 2, Komputer',
+    image: AssetGuru25.src,
   },
   {
     name: 'Muhammad Nur, S.Pd',
@@ -44,19 +49,9 @@ export const gurus = [
     image: AssetGuru1.src,
   },
   {
-    name: 'Mahyudanil Azmi, M.Pd',
-    position: 'Matematika',
-    image: AssetGuru2.src,
-  },
-  {
-    name: 'M. Basyir Ridho Rangkuti, S.Pd',
-    position: 'PKN',
-    image: AssetGuru3.src,
-  },
-  {
-    name: 'Nurbaiti Lubis, S.Ag',
-    position: 'Agama',
-    image: AssetGuru4.src,
+    name: 'Wahyu Hidayah, S.Pd',
+    position: 'WKS 3, Biologi',
+    image: AssetGuru10.src,
   },
   {
     name: 'Asmawati, M.Pd',
@@ -64,9 +59,9 @@ export const gurus = [
     image: AssetGuru5.src,
   },
   {
-    name: 'Wahyo, M.Pd',
-    position: 'Penjas, Operator sekolah',
-    image: AssetGuru6.src,
+    name: 'Aldenan Samosir, S.Pd',
+    position: 'Biologi',
+    image: AssetGuru18.src,
   },
   {
     name: 'Nabila Adinda, S.Sos',
@@ -79,64 +74,9 @@ export const gurus = [
     image: AssetGuru8.src,
   },
   {
-    name: 'Emena Gorya, S.Psi',
-    position: 'BK',
-    image: AssetGuru9.src,
-  },
-  {
-    name: 'Wahyu Hidayah, S.Pd',
-    position: 'WKS 3, Biologi',
-    image: AssetGuru10.src,
-  },
-  {
-    name: 'Drs. H. Bambang Laksono',
-    position: 'Agama',
-    image: AssetGuru11.src,
-  },
-  {
-    name: 'Fitra Insana, S.Pd',
-    position: 'Sejarah',
-    image: AssetGuru12.src,
-  },
-  {
-    name: 'Yolanda Pratiwi, S.Si',
-    position: 'Admin Fokus',
-    image: AssetGuru13.src,
-  },
-  {
-    name: 'Eli Oktaviana, S.PdI',
-    position: 'Matematika',
-    image: AssetGuru14.src,
-  },
-  {
-    name: 'Muhammad Zein Lubis, M.Pd',
-    position: 'Bahasa Inggris',
-    image: AssetGuru15.src,
-  },
-  {
     name: 'Fachrun Azmi, S.Pd',
     position: 'Ekonomi',
     image: AssetGuru16.src,
-  },
-  {
-    name: 'Rian Arif, S.Pd',
-    position: 'Bahasa Inggris',
-    image: AssetGuru17.src,
-  },
-  {
-    name: 'Aldenan Samosir, S.Pd',
-    position: 'Biologi',
-    image: AssetGuru18.src,
-  },
-  {
-    name: 'Drs. Idrus',
-    position: 'Agama Islam',
-    image: AssetGuru19.src,
-  },
-  {
-    name: 'Hendri Siregar, LC, M.H',
-    position: 'Agama Islam',
-    image: AssetGuru20.src,
   },
   {
     name: 'Maulana Tri Agung, S.Pd',
@@ -149,9 +89,14 @@ export const gurus = [
     image: AssetGuru22.src,
   },
   {
-    name: 'Susasman, S.Pd.I',
-    position: 'Bahasa Inggris',
-    image: AssetGuru23.src,
+    name: 'Mahyudanil Azmi, M.Pd',
+    position: 'Matematika',
+    image: AssetGuru2.src,
+  },
+  {
+    name: 'Eli Oktaviana, S.PdI',
+    position: 'Matematika',
+    image: AssetGuru14.src,
   },
   {
     name: 'Maulida Rahmah, S.Pd',
@@ -159,13 +104,68 @@ export const gurus = [
     image: AssetGuru24.src,
   },
   {
-    name: 'Sulton, S.T',
-    position: 'WKS 2, Komputer',
-    image: AssetGuru25.src,
+    name: 'M. Basyir Ridho Rangkuti, S.Pd',
+    position: 'PKN',
+    image: AssetGuru3.src,
   },
   {
     name: 'Doni Pasaribu, S.Pd',
     position: 'PKN',
     image: AssetGuru26.src,
+  },
+  {
+    name: 'Nurbaiti Lubis, S.Ag',
+    position: 'Agama',
+    image: AssetGuru4.src,
+  },
+  {
+    name: 'Drs. H. Bambang Laksono',
+    position: 'Agama',
+    image: AssetGuru11.src,
+  },
+  {
+    name: 'Emena Gorya, S.Psi',
+    position: 'BK',
+    image: AssetGuru9.src,
+  },
+  {
+    name: 'Fitra Insana, S.Pd',
+    position: 'Sejarah',
+    image: AssetGuru12.src,
+  },
+  {
+    name: 'Yolanda Pratiwi, S.Si',
+    position: 'Admin Fokus',
+    image: AssetGuru13.src,
+  },
+  {
+    name: 'Muhammad Zein Lubis, M.Pd',
+    position: 'Bahasa Inggris',
+    image: AssetGuru15.src,
+  },
+  {
+    name: 'Rian Arif, S.Pd',
+    position: 'Bahasa Inggris',
+    image: AssetGuru17.src,
+  },
+  {
+    name: 'Susasman, S.Pd.I',
+    position: 'Bahasa Inggris',
+    image: AssetGuru23.src,
+  },
+  {
+    name: 'Wahyo, M.Pd',
+    position: 'Penjas, Operator sekolah',
+    image: AssetGuru6.src,
+  },
+  {
+    name: 'Drs. Idrus',
+    position: 'Agama',
+    image: AssetGuru19.src,
+  },
+  {
+    name: 'Hendri Siregar, LC, M.H',
+    position: 'Agama',
+    image: AssetGuru20.src,
   },
 ];
