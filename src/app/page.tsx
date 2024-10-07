@@ -68,7 +68,7 @@ export default function Home(): JSX.Element {
                 <h1 className="font-bold uppercase text-2xl xl:text-4xl text-center lg:text-start">sma harapan 3 </h1>
               </div>
               <p className="w-full xl:max-w-xl text-justify leading-[1.60]">
-                SMA Harapan 3 didirikan pada tahun 1991 dengan tujuan mengembangkan siswa secara akademis dan karakter. Sekolah ini fokus pada keseimbangan prestasi akademik dan keterampilan hidup. Program pengembangan keterampilan hidup
+                SMA Harapan 3 didirikan pada tahun 2004 dengan tujuan mengembangkan siswa secara akademis dan karakter. Sekolah ini fokus pada keseimbangan prestasi akademik dan keterampilan hidup. Program pengembangan keterampilan hidup
                 mencakup kepemimpinan dan kerja tim. Selain itu, siswa diajarkan berpikir kritis dan adaptif terhadap perubahan zaman. Sekolah ini juga menekankan pendidikan moral sebagai dasar karakter. Kegiatan ekstrakurikuler membantu
                 mengasah keterampilan non-akademik. SMA Harapan 3 berupaya menciptakan lingkungan yang mendukung pengembangan potensi siswa.
               </p>
