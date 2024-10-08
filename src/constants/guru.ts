@@ -40,7 +40,7 @@ export const gurus = [
   },
   {
     name: 'Sulton, S.T',
-    position: 'WKS 2, Komputer',
+    position: 'WKS 1, Komputer',
     image: AssetGuru25.src,
   },
   {
