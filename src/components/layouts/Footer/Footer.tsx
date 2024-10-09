@@ -48,13 +48,13 @@ export default function Footer(): JSX.Element {
               <Link href="/akademik/guru" className="text-white">
                 Guru
               </Link>
-              <Link href="/sarpra" className="text-white">
+              <Link href="/akademik/sarpra" className="text-white">
                 Sarpra
               </Link>
-              <Link href="/ekstrakurikuler" className="text-white">
+              <Link href="/akademik/ekstrakurikuler" className="text-white">
                 Ekstrakurikuler
               </Link>
-              <Link href="/artikel" className="text-white">
+              <Link href="/akademik/artikel" className="text-white">
                 artikel
               </Link>
             </div>
@@ -62,7 +62,7 @@ export default function Footer(): JSX.Element {
           <div className="flex flex-col gap-y-4 w-full lg:w-2/5">
             <h3 className="font-semibold text-white">Kunjungi Kami</h3>
             <div className="flex flex-col gap-y-3">
-              <Link href="/" className="text-white">
+              <Link href="https://maps.app.goo.gl/maWsQBx9AdezKgh88" className="text-white">
                 Jl. Karya Wisata No.31, Deli Tua, Kec. Namorambe, Kabupaten Deli Serdang, Sumatera Utara 20146
               </Link>
             </div>
@@ -70,7 +70,7 @@ export default function Footer(): JSX.Element {
           <div className="flex flex-col gap-y-4">
             <h3 className="font-semibold text-white">Hubungi Kami</h3>
             <div className="flex flex-col gap-y-6">
-              <Link href="/" className="flex gap-x-3 items-center text-white">
+              <Link href="mailto:admin.smaharapan3.sch.id" className="flex gap-x-3 items-center text-white">
                 <Sms color="#fff" size="30" />
                 <span>admin@harapan.ac.id</span>
               </Link>
