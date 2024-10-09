@@ -1,8 +1,8 @@
 'use client';
 
 import { JSX } from 'react';
+import { Esktrakurikuler, esktrakurikulers } from '@/constants/esktrakurikuler';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Page(): JSX.Element {
   return (
@@ -16,6 +16,25 @@ export default function Page(): JSX.Element {
           </div>
         </div>
       </header>
+
+      <section className="flex flex-col overflow-x-hidden py-[30px] items-center justify-center">
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-14 px-5 xl:px-10">
+          {esktrakurikulers.map((ekskul, index) => (
+            <div key={index} className="group relative flex flex-col overflow-hidden rounded-lg bg-primary-600 shadow-md">
+              {/* Image Container */}
+              <div className="relative h-64 w-full overflow-hidden">
+                <Image src={ekskul.image} alt={ekskul.name.short} className="h-full w-full object-cover" width={400} height={320} />
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-col p-6">
+                <h3 className="text-lg font-semibold text-white uppercase">{ekskul.name.short}</h3>
+                {ekskul.content && <p className="mt-2 text-gray-600">{ekskul.content}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

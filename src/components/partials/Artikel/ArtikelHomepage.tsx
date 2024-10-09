@@ -57,7 +57,7 @@ export default function ArtikelHomepage(): JSX.Element {
                   <p className="text-justify leading-6">{artikel.content.slice(0, 400)}...</p>
                   <Link
                     href={`/akademik/artikel/${createSlug(artikel.title)}`}
-                    className="bg-primary-600 border border-primary-600 px-5 py-2 font-semibold text-white rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300 text-center self-start mt-2"
+                    className="bg-primary-600 border border-primary-600 px-7 py-3 xl:px-10 xl:py-4 font-semibold text-white rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300 text-center self-start mt-2"
                   >
                     Baca artikel
                   </Link>

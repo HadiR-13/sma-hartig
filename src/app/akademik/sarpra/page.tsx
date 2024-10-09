@@ -2,7 +2,6 @@
 
 import { JSX } from 'react';
 import Image from 'next/image';
-import AssetDummyGaleri from '@/assets/galeri/png/asset-dummy-galeri.png';
 import { Sarpra, sarpras } from '@/constants/sarpra';
 
 type FacilityCardProps = {
