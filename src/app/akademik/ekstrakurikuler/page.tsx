@@ -14,6 +14,9 @@ export default function Page(): JSX.Element {
             <h3 className="uppercase text-xl lg:text-2xl text-primary-600">ekstrakurikuler</h3>
             <h1 className="uppercase text-2xl lg:text-4xl">sma harapan 3</h1>
           </div>
+          <p className="text-justify lg:text-center w-full lg:w-[80%] text-secondary leading-8">
+            Ekstrakurikuler adalah kegiatan yang dilakukan di luar jam pelajaran. Kegiatan ini bertujuan untuk mengembangkan bakat dan minat siswa di bidang tertentu. Berikut beberapa ekstrakurikuler yang ada di SMA Harapan 3.
+          </p>
         </div>
       </header>
 
