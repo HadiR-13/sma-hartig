@@ -34,7 +34,7 @@ export type Guru = {
 
 export const gurus = [
   {
-    name: 'Surya Hadi Marwan, S.Pd',
+    name: 'Suryahadi Marwan, M.Pd',
     position: 'Kepala Sekolah',
     image: AssetKepsek.src,
   },
@@ -89,7 +89,7 @@ export const gurus = [
     image: AssetGuru22.src,
   },
   {
-    name: 'Mahyudanil Azmi, M.Pd',
+    name: 'Mahyudanil Azmi, M.Si',
     position: 'Matematika',
     image: AssetGuru2.src,
   },
