@@ -20,19 +20,12 @@
 .item figcaption {
   color: white;
   position: absolute;
-  bottom: -9rem;
+  bottom: 0;
   background-color: #070f18;
-  opacity: 100;
+  opacity: 90%;
   width: 100%;
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
   transition: all 0.3s;
 }
 
-.item:hover figcaption {
-  bottom: 0;
-}
-
-.item:active figcaption {
-  bottom: 0;
-}

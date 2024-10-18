@@ -6,11 +6,11 @@ export type programUnggulan = {
 export const programUnggulans: programUnggulan[] = [
   {
     name: 'Kelas Fokus Unggulan',
-    image: '/png/asset-fokus-kedokteran.png',
+    image: '/png/asset-fokus-kedokteran.jpg',
   },
   {
     name: 'Kurikulum Cambridge',
-    image: '/png/asset-kurikulum-cambridge.png',
+    image: '/png/asset-kurikulum-cambridge.jpg',
   },
   {
     name: 'Kurikulum Penggerak',
@@ -18,7 +18,7 @@ export const programUnggulans: programUnggulan[] = [
   },
   {
     name: 'Pertukaran Guru dan Siswa',
-    image: '/png/asset-pertukaran-siswa.png',
+    image: '/png/asset-pertukaran-siswa.jpg',
   },
   {
     name: 'Kunjugan Kampus',
