@@ -42,7 +42,7 @@ export default function Page(): JSX.Element {
             <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 gap-x-0 lg:gap-x-9 items-center justify-center">
               <Image src={AssetVisi} alt="Asset Dummy Tentang" className="w-full max-w-xl rounded-2xl"></Image>
               <div className="flex flex-col gap-y-6">
-                <h1 className="font-bold text-2xl text-center lg:text-start lg:text-3xl uppercase">visi dari sma harapan 3</h1>
+                <h1 className="font-bold text-2xl text-center lg:text-start lg:text-3xl uppercase">visi sma harapan 3</h1>
                 <p className="leading-8 text-secondary text-justify">
                   Visi sekolah ini adalah menjadi lembaga yang unggul dalam iman, ilmu, amal, bermartabat, dan berprestasi, serta mencetak pelajar yang memiliki kepribadian sesuai dengan profil Pelajar Pancasila. Sekolah ini fokus dalam
                   mengembangkan prestasi peserta didiknya, baik dalam kegiatan keagamaan maupun bidang akademik, termasuk assesment nasional dan lomba sains. Selain itu, prestasi juga diraih dalam bidang olahraga, pramuka, dan seni.
@@ -54,7 +54,7 @@ export default function Page(): JSX.Element {
             <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 gap-x-0 lg:gap-x-9 items-center justify-center">
               <Image src={AssetMisi} alt="Asset Dummy Tentang" className="w-full max-w-xl rounded-2xl"></Image>
               <div className="flex flex-col gap-y-6">
-                <h1 className="font-bold text-2xl text-center lg:text-start lg:text-3xl uppercase">MISI DARI SMA HARAPAN 3</h1>
+                <h1 className="font-bold text-2xl text-center lg:text-start lg:text-3xl uppercase">MISI SMA HARAPAN 3</h1>
                 <p className="leading-8 text-secondary text-justify">
                   Misi SMA Harapan 3 adalah menjadi tempat bagi para juara yang menguasai ilmu pengetahuan dan teknologi, sambil berpegang pada ajaran Islam dan Pancasila. Sekolah berkomitmen menumbuhkembangkan karakter bermartabat sesuai
                   Profil Pelajar Pancasila, termasuk nilai beriman dan berakhlak mulia. Pembelajaran dan bimbingan yang efektif membantu siswa berkembang sesuai potensi. Program literasi dan literasi digital diterapkan untuk membudayakan
