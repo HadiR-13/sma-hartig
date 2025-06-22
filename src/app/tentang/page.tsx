@@ -1,13 +1,17 @@
 'use client';
 
-import { JSX } from 'react';
+import { JSX, useState } from 'react'; // Impor useState
 import Image from 'next/image';
 import AssetTentang from '@/assets/tentang/asset-tentang.webp';
 import AssetVisi from '@/assets/tentang/asset-visi.webp';
 import AssetMisi from '@/assets/tentang/asset-misi.webp';
 import AssetTujuan from '@/assets/tentang/asset-tujuan.webp';
+import AssetVideoThumbnail from '@/assets/tentang/thumbnail-video.webp';
 
 export default function Page(): JSX.Element {
+  // State untuk mengontrol tampilan video
+  const [showVideo, setShowVideo] = useState(false);
+
   return (
     <main className="">
       {/* Header */}
@@ -66,7 +70,7 @@ export default function Page(): JSX.Element {
             <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 gap-x-0 lg:gap-x-9 items-center justify-center">
               <Image src={AssetTujuan} alt="Asset Dummy Tentang" className="w-full max-w-xl rounded-2xl"></Image>
               <div className="flex flex-col gap-y-6">
-                <h1 className="font-bold text-2xl text-center lg:text-start lg:text-3xl uppercase">TUJUAN DARI SMA HARAPAN 3</h1>
+                <h1 className="font-bold text-2xl text-center lg:text-start lg:text-3xl uppercase">TUJUAN SMA HARAPAN 3</h1>
                 <p className="leading-8 text-secondary text-justify">
                   Tujuan sekolah adalah meningkatkan pengetahuan siswa untuk melanjutkan pendidikan ke jenjang lebih tinggi dan kemampuan berinteraksi dengan lingkungan sosial budaya serta alam. Kami mendorong prestasi di bidang sains agar
                   siswa dapat lulus di PTN favorit dan kedinasan. Selain itu, semangat literasi Al-Qur'an, persaudaraan, solidaritas, dan cinta kasih perlu ditumbuhkan. Kami berkomitmen menyediakan sarana prasarana pendidikan yang memadai
@@ -74,6 +78,33 @@ export default function Page(): JSX.Element {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Video Profil - UPDATED with Custom Thumbnail */}
+      <section className="flex flex-col overflow-x-hidden bg-white py-[30px] lg:py-[80px]">
+        <div className="container flex flex-col items-center justify-center gap-y-9 px-5 py-10 xl:px-10">
+          {/* Judul Video */}
+          <div className="flex flex-col gap-y-2 text-center font-bold">
+            <h3 className="text-primary-600 uppercase text-xl lg:text-2xl">sekilas tentang kami</h3>
+            <h1 className="uppercase text-2xl lg:text-4xl">profil video sma harapan 3</h1>
+          </div>
+
+          <div className="w-full max-w-4xl aspect-video">
+            {!showVideo ? (
+              <div onClick={() => setShowVideo(true)} className="relative h-full w-full cursor-pointer">
+                <Image src={AssetVideoThumbnail} alt="Thumbnail Profil Video SMA Harapan 3" layout="fill" objectFit="cover" />
+              </div>
+            ) : (
+              <iframe
+                className="h-full w-full rounded-xl"
+                src="https://www.youtube.com/embed/KD2mtC6bpos?si=_EsA158cBEYFB6Ez?&autoplay=1"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            )}
           </div>
         </div>
       </section>
