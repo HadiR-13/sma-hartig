@@ -1,17 +1,40 @@
 'use client';
 
-import { JSX } from 'react';
-import Image from 'next/image';
+import { JSX, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { artikels } from '@/constants/artikel';
+import { supabase } from '@/lib/supabaseClient';
+
+interface Article {
+  id: string;
+  title: string;
+  date: string;
+  content: string;
+  imageUrl: string;
+  slug: string;
+}
 
 export default function Page(): JSX.Element {
-  const createSlug = (title: string) => {
-    return title
-      .toLowerCase()
-      .replace(/ /g, '-')
-      .replace(/[^\w-]+/g, '');
-  };
+  const [articles, setArticles] = useState<Article[]>([]);
+    useEffect(() => {
+      async function fetchArticle() {
+        try {
+          const { data, error } = await supabase
+            .from('Artikel')
+            .select('id, title, date, content, imageUrl, slug')
+            .order('date', { ascending: false });
+          
+          if (error || !articles) {
+            console.log('Article not found');
+            return;
+          }
+          setArticles(data);
+        } catch (err) {
+          console.log('Failed to fetch article');
+        }
+      }
+  
+      fetchArticle();
+    }, []);
 
   const truncateText = (text: string, maxLength: number) => {
     if (text.length <= maxLength) return text;
@@ -36,16 +59,16 @@ export default function Page(): JSX.Element {
       {/* Section */}
       <section className="flex flex-col overflow-x-hidden py-[30px] items-center justify-center">
         <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-14 px-5 xl:px-10">
-          {artikels.map((artikel, index) => (
+          {articles.map((artikel, index) => (
             <article key={index} className="flex flex-col bg-white rounded-xl shadow-sm overflow-hidden group">
               <div className="relative h-[240px] overflow-hidden">
-                <Image src={artikel.images[0]} alt={artikel.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src={artikel.imageUrl} alt={artikel.title} className="object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="flex flex-col p-6 gap-y-4 flex-grow">
                 <p className="text-sm text-gray-600">{artikel.date}</p>
                 <h2 className="text-xl font-bold line-clamp-2 group-hover:text-primary-600 transition-colors duration-300">{artikel.title}</h2>
                 <p className="text-gray-600 line-clamp-3">{truncateText(artikel.content, 150)}</p>
-                <Link href={`/akademik/artikel/${createSlug(artikel.title)}`} className="mt-auto">
+                <Link href={`/akademik/artikel/${artikel.slug}`} className="mt-auto">
                   <button className="w-full mt-4 px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors duration-300 flex items-center justify-center gap-2">
                     Baca Selengkapnya
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
