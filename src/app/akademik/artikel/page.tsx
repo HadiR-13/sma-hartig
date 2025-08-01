@@ -1,40 +1,11 @@
 'use client';
 
-import { JSX, useEffect, useState } from 'react';
+import { fetchArticles } from '@/hooks/fetchArtikel';
+import { JSX } from 'react';
 import Link from 'next/link';
-import { supabase } from '@/lib/supabaseClient';
-
-interface Article {
-  id: string;
-  title: string;
-  date: string;
-  content: string;
-  imageUrl: string;
-  slug: string;
-}
 
 export default function Page(): JSX.Element {
-  const [articles, setArticles] = useState<Article[]>([]);
-    useEffect(() => {
-      async function fetchArticle() {
-        try {
-          const { data, error } = await supabase
-            .from('Artikel')
-            .select('id, title, date, content, imageUrl, slug')
-            .order('date', { ascending: false });
-          
-          if (error || !articles) {
-            console.log('Article not found');
-            return;
-          }
-          setArticles(data);
-        } catch (err) {
-          console.log('Failed to fetch article');
-        }
-      }
-  
-      fetchArticle();
-    }, []);
+  const { articles, loading, error } = fetchArticles();
 
   const truncateText = (text: string, maxLength: number) => {
     if (text.length <= maxLength) return text;

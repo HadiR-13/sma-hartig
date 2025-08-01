@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { notFound, useRouter } from 'next/navigation';
-import { supabase } from '@/lib/supabaseClient';
-import { createSlug, compressImage } from '@/lib/articleUtils';
+import { createClient } from '@/utils/supabase/client';
+import { createSlug, compressImage } from '@/utils/articleUtils';
 
 export default function EditArticle({ params }: { params: { slug: string } }) {
+  const supabase = createClient();
   const router = useRouter();
 
   const [artikel, setArtikel] = useState<any>(null);
@@ -66,10 +67,13 @@ export default function EditArticle({ params }: { params: { slug: string } }) {
 
       const { error: uploadError } = await supabase.storage
         .from('artikel-image')
-        .upload(filePath, imageFile);
+        .upload(filePath, imageFile, {
+          contentType: 'image/webp',
+          upsert: true,
+      });
 
       if (uploadError) {
-        alert('Gagal mengunggah gambar!');
+        alert('Gagal mengunggah gambar!, ' + uploadError.message);
         return;
       }
 

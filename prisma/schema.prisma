@@ -20,6 +20,6 @@ model Artikel {
   title     String
   content   String
   date      String
-  imageUrl  String
-  slug      String
+  imageUrl  String    @unique
+  slug      String    @unique
 }

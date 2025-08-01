@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { supabase } from '@/lib/supabaseClient';
-import { createSlug, compressImage } from '@/lib/articleUtils';
+import { createClient } from '@/utils/supabase/client';
+import { createSlug, compressImage } from '@/utils/articleUtils';
 
 export default function NewArticle() {
   const router = useRouter();
@@ -12,10 +12,11 @@ export default function NewArticle() {
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState('');
   const [date, setDate] = useState('');
+  const supabase = createClient();
 
   useEffect(() => {
     const today = new Date();
-    setDate(`Medan, ${today.toLocaleDateString('id-ID', {
+    setDate(`Medan, ${today.toLocaleDateString('en-GB', {
       day: '2-digit', month: 'long', year: 'numeric'
     })}`);
   }, []);
@@ -45,10 +46,11 @@ export default function NewArticle() {
 
     const { error: uploadError } = await supabase.storage
       .from('artikel-image')
-      .upload(filePath, imageFile);
+      .upload(filePath, imageFile, {contentType: 'image/webp', upsert: true});
 
     if (uploadError) {
-      alert('Gagal mengunggah gambar!');
+      console.log(imageFile);
+      alert(uploadError.message);
       return;
     }
 
@@ -62,6 +64,7 @@ export default function NewArticle() {
       .insert([articleData]);
 
     if (error) {
+      console.log(articleData);
       console.error(error.message);
       return;
     }

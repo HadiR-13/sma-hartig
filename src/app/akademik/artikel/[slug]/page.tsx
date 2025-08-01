@@ -3,22 +3,15 @@
 import { JSX, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { supabase } from '@/lib/supabaseClient';
+import { createClient } from '@/utils/supabase/client';
 import { Facebook, Whatsapp } from 'iconsax-react';
-
-interface Article {
-  id: string;
-  title: string;
-  date: string;
-  content: string;
-  imageUrl: string;
-  slug: string;
-}
+import { Article } from '@/constants/artikel';
 
 export default function ArticleDetail({ params }: { params: { slug: string } }): JSX.Element {
   const [artikel, setArtikel] = useState<Article | null>(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const supabase = createClient();
 
   useEffect(() => {
     async function fetchArticle() {
@@ -116,7 +109,7 @@ export default function ArticleDetail({ params }: { params: { slug: string } }):
         <article>
           <header className="mb-8">
             <time dateTime={artikel.date} className="text-gray-600 mb-2 block">
-              {new Date(artikel.date).toLocaleDateString('id-ID', {year: 'numeric', month: 'long', day: 'numeric'})}
+              {"Medan, " + new Date(artikel.date).toLocaleDateString('id-ID', {year: 'numeric', month: 'long', day: '2-digit'})}
             </time>
             <h1 className="text-xl md:text-4xl font-bold mb-6">{artikel.title}</h1>
           </header>
@@ -126,7 +119,7 @@ export default function ArticleDetail({ params }: { params: { slug: string } }):
           </div>
           
           <div className="prose prose-lg max-w-none">
-            {artikel.content.split('\\n\\n').map((paragraph: string, index: number) => (
+            {artikel.content.split('\n\n').map((paragraph: string, index: number) => (
               <p key={index} className="mb-6 text-justify leading-relaxed">
                 {paragraph}
               </p>
