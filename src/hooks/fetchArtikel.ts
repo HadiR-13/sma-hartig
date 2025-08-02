@@ -1,39 +1,62 @@
-// /hooks/useArticles.ts
 import { useEffect, useState } from 'react';
 import { createClient } from '@/utils/supabase/client';
 import { Article } from '@/constants/artikel';
 
-export function fetchArticles() {
-  const [articles, setArticles] = useState<Article[]>([]);
+const supabase = createClient();
+export function fetchArticles(slug: string | null = null) {
+  const [article, setArticle] = useState<Article | null>(null);
+  const [articles, setArticles] = useState<Article[] | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-  const supabase = createClient();
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    async function fetchArticles() {
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null);
+
       try {
-        const { data, error } = await supabase
+        let query = supabase
           .from('Artikel')
-          .select('id, title, date, content, imageUrl, slug')
-          .order('date', { ascending: false });
+          .select('id, title, date, content, imageUrl, slug');
 
-        if (error) {
-          setError('Failed to fetch articles');
-          console.error('Supabase error:', error);
-          return;
+        if (slug) {
+          const { data, error } = await query.eq('slug', slug).single();
+          if (error) throw error;
+          setArticle(data);
+          setArticles(null);
+        } else {
+          const { data, error } = await query.order('date', { ascending: false });
+          if (error) throw error;
+          setArticles(data);
+          setArticle(null);
         }
-
-        setArticles(data || []);
       } catch (err) {
-        console.error('Unexpected error:', err);
-        setError('Unexpected error occurred');
+        console.error('Fetch error:', err);
+        setError('Failed to fetch articles');
       } finally {
         setLoading(false);
       }
-    }
+    };
 
-    fetchArticles();
-  }, []);
+    fetchData();
+  }, [slug]);
 
-  return { articles, loading, error };
+  return { article, articles, loading, error };
+}
+
+export async function deleteArticle(id: string | null = null) {
+  if (!confirm('Apakah Anda yakin ingin menghapus artikel ini?') || !id) return;
+
+  const { error } = await supabase
+    .from('Artikel')
+    .delete()
+    .eq('id', id);
+
+  if (error) {
+    alert('Gagal menghapus artikel.');
+    return;
+  }
+
+  alert('Artikel berhasil dihapus.');
+  window.location.reload();
 }

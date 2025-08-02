@@ -13,7 +13,7 @@ export default function LoginPage() {
           <label htmlFor="email" className="mb-1 text-sm font-medium text-gray-700">
             Email
           </label>
-          <input id="email" name="email" type="email" required autoComplete="email" placeholder="contoh@email.com" className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-600"/>
+          <input id="email" name="email" type="email" required autoComplete="email" placeholder="username@email.com" className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-600"/>
         </div>
 
         <div className="flex flex-col">

@@ -33,11 +33,12 @@ export async function updateSession(request: NextRequest) {
 
   // IMPORTANT: DO NOT REMOVE auth.getUser()
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const { data: { user }, } = await supabase.auth.getUser()
 
   if (!user && !request.nextUrl.pathname.startsWith('/auth')) {
+    if (request.nextUrl.pathname.startsWith('/dashboard')) {
+      return NextResponse.redirect(new URL('/login', request.url));
+    }
     if (request.nextUrl.pathname.startsWith('/akademik/artikel/edit/')) {
       const slug = request.nextUrl.pathname.replace('/akademik/artikel/edit/', '');
       return NextResponse.redirect(new URL(`/akademik/artikel/${slug}`, request.url));

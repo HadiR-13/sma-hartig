@@ -1,42 +1,13 @@
 'use client';
 
-import { JSX, useEffect, useState } from 'react';
+import { JSX } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { createClient } from '@/utils/supabase/client';
+import { fetchArticles } from '@/hooks/fetchArtikel';
 import { Facebook, Whatsapp } from 'iconsax-react';
-import { Article } from '@/constants/artikel';
 
 export default function ArticleDetail({ params }: { params: { slug: string } }): JSX.Element {
-  const [artikel, setArtikel] = useState<Article | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-  const supabase = createClient();
-
-  useEffect(() => {
-    async function fetchArticle() {
-      try {
-        const { data, error } = await supabase
-          .from('Artikel')
-          .select('id, title, date, content, imageUrl, slug')
-          .eq('slug', params.slug)
-          .single();
-        
-        if (error || !data) {
-          setError('Article not found');
-          return;
-        }
-        
-        setArtikel(data);
-      } catch (err) {
-        setError('Failed to fetch article');
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchArticle();
-  }, [params.slug]);
+  const { article, loading, error } = fetchArticles(params.slug);
 
   if (loading) {
     return (
@@ -58,7 +29,7 @@ export default function ArticleDetail({ params }: { params: { slug: string } }):
     );
   }
 
-  if (error || !artikel) {
+  if (error || !article) {
     notFound();
   }
 
@@ -75,12 +46,12 @@ export default function ArticleDetail({ params }: { params: { slug: string } }):
       window.open(url, '_blank', 'noopener,noreferrer');
     },
     twitter: () => {
-      const text = `${artikel.title}`;
+      const text = `${article.title}`;
       const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(getCurrentURL())}`;
       window.open(url, '_blank', 'noopener,noreferrer');
     },
     whatsapp: () => {
-      const text = `${artikel.title}\n\n${getCurrentURL()}`;
+      const text = `${article.title}\n\n${getCurrentURL()}`;
       const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
     },
@@ -108,18 +79,18 @@ export default function ArticleDetail({ params }: { params: { slug: string } }):
         
         <article>
           <header className="mb-8">
-            <time dateTime={artikel.date} className="text-gray-600 mb-2 block">
-              {"Medan, " + new Date(artikel.date).toLocaleDateString('id-ID', {year: 'numeric', month: 'long', day: '2-digit'})}
+            <time dateTime={article.date} className="text-gray-600 mb-2 block">
+              {"Medan, " + new Date(article.date).toLocaleDateString('id-ID', {year: 'numeric', month: 'long', day: '2-digit'})}
             </time>
-            <h1 className="text-xl md:text-4xl font-bold mb-6">{artikel.title}</h1>
+            <h1 className="text-xl md:text-4xl font-bold mb-6">{article.title}</h1>
           </header>
     
           <div className="mb-8">
-            <img src={artikel.imageUrl} alt={artikel.title} width={1200} height={400} className="w-full h-[400px] object-cover rounded-lg" loading="eager" fetchPriority="high"/>
+            <img src={article.imageUrl} alt={article.title} width={1200} height={400} className="w-full h-[400px] object-cover rounded-lg" loading="eager" fetchPriority="high"/>
           </div>
           
           <div className="prose prose-lg max-w-none">
-            {artikel.content.split('\n\n').map((paragraph: string, index: number) => (
+            {article.content.split('\n\n').map((paragraph: string, index: number) => (
               <p key={index} className="mb-6 text-justify leading-relaxed">
                 {paragraph}
               </p>

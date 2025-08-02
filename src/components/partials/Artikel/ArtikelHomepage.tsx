@@ -7,7 +7,39 @@ import { JSX } from 'react';
 export default function ArtikelHomepage(): JSX.Element {
   const { articles, loading, error } = fetchArticles();
 
-  const previewArticles = articles.slice(0, 3);
+  const previewArticles = articles?.slice(0, 3) || [];
+
+  if(loading) {
+    return (
+      <div className="flex flex-col gap-y-12 animate-pulse">
+        <div className="flex flex-col xl:flex-row gap-y-7 xl:gap-x-14 items-center justify-center">
+          <div className="w-full h-[25rem] xl:min-w-[50%] bg-gray-200 rounded-lg" />
+          <div className="flex flex-col justify-between gap-y-6 w-full">
+            <div className="flex flex-col gap-y-3">
+              <div className="h-4 w-1/4 bg-gray-300 rounded" />
+              <div className="h-8 w-3/4 bg-gray-300 rounded" />
+              <div className="h-24 w-full bg-gray-200 rounded" />
+            </div>
+            <div className="h-12 w-40 bg-gray-300 rounded-full" />
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {Array.from({ length: 2 }).map((_, i) => (
+            <div key={i} className="flex flex-col gap-y-4">
+              <div className="w-full h-[15rem] bg-gray-200 rounded-lg" />
+              <div className="flex flex-col gap-y-2">
+                <div className="h-4 w-1/3 bg-gray-300 rounded" />
+                <div className="h-6 w-2/3 bg-gray-300 rounded" />
+                <div className="h-20 w-full bg-gray-200 rounded" />
+                <div className="h-12 w-40 bg-gray-300 rounded-full mt-2" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <section className="flex flex-col px-4 py-[50px] lg:py-[80px] gap-y-16 z-30 container">
